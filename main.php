@@ -1,5 +1,6 @@
 <html>
     <?php 
+        session_start();
         include 'scripts/app-header.php'; 
         include 'scripts/app-functions.php';
 	/* ***********************************************************************
@@ -73,8 +74,7 @@
     <body>
         <div id='wrapper'>
             <a href='scripts/authenticate.php'>Click to Login</a><br>
-            <?php 
-                session_start();
+            <?php
                 $mygtoken = json_decode($_SESSION['access_token'], TRUE);
                 echo $mygtoken["access_token"];
                 $sheetvalues = google_spreadsheet_to_array_v3($mygtoken["access_token"]);
