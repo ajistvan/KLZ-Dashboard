@@ -73,7 +73,7 @@
     ?>
     <body>
         <div id='wrapper'>
-            <a href='scripts/authenticate.php'>Click to Login</a><br>
+            <a href='scripts/authenticate.php'>Click to Login Again</a><br>
             <?php
                 $mygtoken = json_decode($_SESSION['access_token'], TRUE);
                 echo $mygtoken["access_token"];
